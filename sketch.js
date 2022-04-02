@@ -8,10 +8,10 @@ var colorInc = 1;  // Color change speed
 var sat = 100; // saturation max 100
 var brt = 100; // brightness max 100
 var alph = 100; // alpha max 100
-var numbPart = 30; // number of particles
+var numbPart = 300; // number of particles
 var partStroke = 2; // line width
-var angMult = 20; // 0.1 = straighter lines; 25+ = sharp curves
-var angTurn = 5; // adjust angle for straight lines (after adjusting angMult)
+var angMult = 2; // 0.1 = straighter lines; 25+ = sharp curves
+var angTurn = 1; // adjust angle for straight lines (after adjusting angMult)
 var zOffInc = 0.0003; // speed of vector changes
 var inc = 0.1;
 var scl = 10;
@@ -140,14 +140,6 @@ function keyTyped() {
     sat -= 10
   }
 
-  if (key === "p"){
-    partStroke += 1;
-  }
-
-  if (key === "o"){
-    partStroke -= 1;
-  }
-
   if (key === "M"){
     background_song.loop();
   }
@@ -164,24 +156,49 @@ function keyTyped() {
     partStroke -= 1;
   }
 
+  if (key === "N"){
+    numPart += 50;
+  }
+
+  if (key === "n"){
+    numPart -= 50;
+  }
+
+  if (key === "Q"){
+    angMult += 5;
+  }
+
+  if (key === "q"){
+    angMult -= 5;
+  }
+
+  if (key === "d"){
+    save("myartwork.jpg");
+  }
+
   if (key === "1"){
     C.loop();
+    numPart += 50;
   }
   
   if (key === "2"){
     D.loop();
+    brt-= 10;
   }
 
   if (key === "3"){
     E.loop();
+    angMult *= 5;
   }
 
   if (key === "4"){
     F.loop();
+    partStroke += 3;
   }
 
   if (key === "5"){
     G.loop();
+    sat *= 3;
   }
 
   if (key === "6"){
@@ -196,22 +213,27 @@ function keyTyped() {
   function keyReleased() {
     if (key === "1"){
       C.stop();
+      numPart -= 50;
     }
 
     if (key === "2"){
       D.stop();
+      brt += 10;
     }
   
     if (key === "3"){
       E.stop();
+      angMult *= 5;
     }
   
     if (key === "4"){
       F.stop();
+      partStroke -= 3;
     }
   
     if (key === "5"){
       G.stop();
+      sat /= 3;
     }
   
     if (key === "6"){
