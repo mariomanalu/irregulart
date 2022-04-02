@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script>
+    <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Irregulart</title>
+    <meta name="description" content="Prism is a beautiful Bootstrap 4 template for open-source landing pages."/>
+
+    <!--Google font-->
+    <link href="https://fonts.googleapis.com/css?family=K2D:300,400,500,700,800" rel="stylesheet">
+
+    <!-- Bootstrap CSS / Color Scheme -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+  </head>
+  <body>
+
+    <!--Header Section-->
+<section class="bg-gradient pt-5 pb-6">
+  <div class="container">
+      <div class="row">
+          <div class="col-12 d-flex flex-row align-items-center justify-content-between">
+              <div class="heading-brand">Irregulart</div>
+              <a href="https://prismjs.com/download.html" class="btn btn-dark" target="_blank">Download</a>
+          </div>
+      </div>
+      <div class="row mt-6">
+          <div class="col-md-8 mx-auto text-center">
+              <h1>When Irregularity Becomes an Artwork</h1>
+              <p class="lead mb-5">Irregulart is an image generator built with mathematics, randomness, and your creativity. 
+                <br>
+                You will never see the same image twice.
+              </p>
+              <a href="#how-to" class="btn btn-success svg-icon">
+              Instructions
+              </a>
+          </div>
+      </div>
+      <div class="row mt-5">
+          <div class="col-md-9 mx-auto">
+              <div class="code-window">
+                <div class="dots">
+                  <div class="red"></div>
+                  <div class="orange"></div>
+                  <div class="green"></div>
+              </div>
+              
+                  <script src="particle.js"></script>
+                  <script src="sketch.js"></script>
+                  <br>
+                <div id = "bigCanvas"></div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+<!--Features Section-->
+<div id = "how-to">
+  <section class="py-6">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-8 mx-auto">
+                  <h2 class="text-center text-md-left">Reasons Why People Love <span class="text-success">Prism.js</span></h2>
+                  <div class="row feature-grid">
+                      <div class="col-sm-6">
+                          <div class="media">
+                              <div class="icon-box">
+                                  <div class="icon-box-inner">
+                                      <span data-feather="check-circle" width="28" height="28"></span>
+                                  </div>
+                              </div>
+                              <div class="media-body">
+                                  A: Play/Generate Lines
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-sm-6">
+                          <div class="media">
+                              <div class="icon-box">
+                                  <div class="icon-box-inner">
+                                      <span data-feather="check-circle" width="28" height="28"></span>
+                                  </div>
+                              </div>
+                              <div class="media-body">
+                                  a: Pause
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-sm-6">
+                        <div class="media">
+                            <div class="icon-box">
+                                <div class="icon-box-inner">
+                                    <span data-feather="check-circle" width="28" height="28"></span>
+                                </div>
+                            </div>
+                            <div class="media-body">
+                                B: Increase Brightness
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="media">
+                            <div class="icon-box">
+                                <div class="icon-box-inner">
+                                    <span data-feather="check-circle" width="28" height="28"></span>
+                                </div>
+                            </div>
+                            <div class="media-body">
+                                b: Decrease Brightness
+                            </div>
+                        </div>
+                    </div>
+                      <div class="col-sm-6">
+                        <div class="media">
+                            <div class="icon-box">
+                                <div class="icon-box-inner">
+                                    <span data-feather="check-circle" width="28" height="28"></span>
+                                </div>
+                            </div>
+                            <div class="media-body">
+                                S: Increase Saturation
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="media">
+                            <div class="icon-box">
+                                <div class="icon-box-inner">
+                                    <span data-feather="check-circle" width="28" height="28"></span>
+                                </div>
+                            </div>
+                            <div class="media-body">
+                                s: Decrease Saturation
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  </div>
+
+
+
+
+
+
+  <script type="module">
+
+    // Import the functions you need from the SDKs you need
+  
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
+  
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-analytics.js";
+  
+    // TODO: Add SDKs for Firebase products that you want to use
+  
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+  
+    // Your web app's Firebase configuration
+  
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  
+    const firebaseConfig = {
+  
+      apiKey: "AIzaSyC8Ql3WSJ9VmY2XePtnYlRlPBeeI8jXisk",
+  
+      authDomain: "irregulart-bfec8.firebaseapp.com",
+  
+      projectId: "irregulart-bfec8",
+  
+      storageBucket: "irregulart-bfec8.appspot.com",
+  
+      messagingSenderId: "334332183992",
+  
+      appId: "1:334332183992:web:d6168fa0ce5b05a405bb4d",
+  
+      measurementId: "G-MWNY4S8LV0"
+  
+    };
+  
+  
+    // Initialize Firebase
+  
+    const app = initializeApp(firebaseConfig);
+  
+    const analytics = getAnalytics(app);
+  
+  </script>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.7.3/feather.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+<script src="js/scripts.js"></script>
+</html>
